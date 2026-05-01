@@ -548,19 +548,66 @@ ul{list-style:none}
   .interiors__grid{grid-template-columns:1fr}
 }
 
+/* === Hamburger button === */
+.hd__hamburger{
+  display:none;flex-direction:column;gap:6px;
+  padding:4px;cursor:pointer;z-index:51;
+  background:none;border:none;
+}
+.hd__hamburger span{
+  display:block;width:26px;height:1.5px;
+  background:var(--salt);
+  transition:transform .3s,opacity .3s;
+}
+.hd.is-scrolled .hd__hamburger span{background:var(--navy)}
+.hd__hamburger.is-open span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+.hd__hamburger.is-open span:nth-child(2){opacity:0}
+.hd__hamburger.is-open span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+.hd__hamburger.is-open span{background:var(--navy)}
+
 /* === Responsive === */
 @media(max-width:900px){
   .wrap{padding:0 24px}
-  .hd__nav{display:none}
+  .hd__hamburger{display:flex}
+  .hd__cta{display:none}
+  .hd__nav{
+    position:fixed;inset:0;
+    background:rgba(244,240,230,0.97);
+    backdrop-filter:blur(16px);
+    flex-direction:column;
+    align-items:center;justify-content:center;
+    gap:40px;z-index:49;
+    display:none;
+  }
+  .hd__nav.is-open{display:flex}
+  .hd__nav a{font-size:1.1rem;letter-spacing:0.3em;color:var(--navy)}
   .works__grid{grid-template-columns:1fr}
   .philo__grid{grid-template-columns:1fr;gap:36px}
   .team__row{grid-template-columns:1fr;gap:48px}
-  .hero__overlay{padding:0 24px 64px}
+  .hero__inner{padding:0 24px 40px}
+  .cinematic__caption{flex-direction:column;gap:6px;padding:20px 24px}
+  .back-to__inner{flex-direction:column;align-items:center;gap:20px;text-align:center}
+  .back-to__ghost{display:none}
+  #wan-map{height:400px}
 }
 @media(max-width:600px){
-  .sec{padding:96px 0}
-  .hero__title{font-size:2.2rem}
+  .sec{padding:80px 0}
+  .hero__title{font-size:clamp(1.9rem,7vw,2.4rem)}
+  .hero__tabs{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .tab{padding:12px 8px;min-width:56px}
+  .tab b{font-size:0.82rem}
   .ft__row{flex-direction:column}
+  .ba-slider{aspect-ratio:4/3}
+  .sec__title{font-size:clamp(1.5rem,5vw,2rem)}
+  .detail__title{font-size:clamp(1.6rem,6vw,2.4rem)}
+  .interiors__grid{grid-template-columns:1fr}
+  .cta__title{font-size:clamp(1.5rem,5vw,1.8rem)}
+  .member__photo{width:160px;height:160px}
+  .info-grid{grid-template-columns:1fr 1fr}
+  .hero__stage-label{flex-direction:column;gap:8px}
+  .hero__stage-label .num{font-size:2rem}
+  .hero__stage-label .name{text-align:left}
+  .cinematic__film{height:50vw;min-height:240px}
 }
 
 /* === Scroll Reveal === */
