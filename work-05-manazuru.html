@@ -95,6 +95,27 @@
   </div>
 </section>
 
+<section class="ba-sec">
+  <div class="wrap">
+    <div class="sec__head reveal" style="text-align:center;margin:0 auto 48px">
+      <p class="kicker">― Before / After</p>
+      <h2 class="sec__title">改修前後</h2>
+      <p class="sec__sub">— Drag to compare —</p>
+    </div>
+    <div class="ba-slider reveal">
+      <img class="ba-img ba-img--after"  src="images/work-05-manazuru.jpg" alt="竣工後">
+      <img class="ba-img ba-img--before" src="images/w05-before.jpg"       alt="改修前">
+      <div class="ba-handle">
+        <div class="ba-knob">
+          <svg width="22" height="12" viewBox="0 0 22 12" fill="currentColor"><path d="M0 6l5-5v3h12V1l5 5-5 5v-3H5v3L0 6z"/></svg>
+        </div>
+      </div>
+      <span class="ba-label ba-label--l">Before</span>
+      <span class="ba-label ba-label--r">After</span>
+    </div>
+  </div>
+</section>
+
 <section class="interiors">
   <div class="wrap">
     <div class="sec__head" style="text-align:center;margin:0 auto 64px">
@@ -129,6 +150,24 @@ const hd=document.getElementById('hd');
 window.addEventListener('scroll',()=>hd.classList.toggle('is-scrolled',window.scrollY>80));
 const revealObs=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-visible');revealObs.unobserve(e.target);}});},{threshold:0.1});
 document.querySelectorAll('.reveal').forEach(el=>revealObs.observe(el));
+
+document.querySelectorAll('.ba-slider').forEach(slider=>{
+  const before=slider.querySelector('.ba-img--before');
+  const handle=slider.querySelector('.ba-handle');
+  let dragging=false;
+  function setPos(x){
+    const r=slider.getBoundingClientRect();
+    const pct=Math.max(5,Math.min(95,(x-r.left)/r.width*100));
+    before.style.clipPath=`inset(0 ${100-pct}% 0 0)`;
+    handle.style.left=pct+'%';
+  }
+  slider.addEventListener('mousedown',e=>{dragging=true;setPos(e.clientX);});
+  window.addEventListener('mousemove',e=>{if(dragging)setPos(e.clientX);});
+  window.addEventListener('mouseup',()=>{dragging=false;});
+  slider.addEventListener('touchstart',e=>{dragging=true;setPos(e.touches[0].clientX);},{passive:true});
+  window.addEventListener('touchmove',e=>{if(dragging)setPos(e.touches[0].clientX);},{passive:true});
+  window.addEventListener('touchend',()=>{dragging=false;});
+});
 </script>
 </body>
 </html>
