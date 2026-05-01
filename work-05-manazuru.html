@@ -57,7 +57,7 @@
     <div class="timeline">
       <div class="timeline__step">
         <div class="timeline__num">01</div>
-        <div class="timeline__body">
+        <div class="timeline__body reveal">
           <p class="timeline__head">2021.05 ／ Survey</p>
           <h3 class="timeline__title">既存建物調査</h3>
           <p class="timeline__desc">戦後すぐに建てられた漁師宿。傾いた柱、雨漏り、剥がれた障子。だが太い梁と海への眺めは、今でも力を持っていた。</p>
@@ -66,7 +66,7 @@
       </div>
       <div class="timeline__step">
         <div class="timeline__num">02</div>
-        <div class="timeline__body">
+        <div class="timeline__body reveal">
           <p class="timeline__head">2021.07 ／ Concept</p>
           <h3 class="timeline__title">構想</h3>
           <p class="timeline__desc">「過去を素直に消さない、現代を素直に入れる」。骨格はそのままに、外装を黒杉に統一、海側を大開口化。</p>
@@ -75,7 +75,7 @@
       </div>
       <div class="timeline__step">
         <div class="timeline__num">03</div>
-        <div class="timeline__body">
+        <div class="timeline__body reveal">
           <p class="timeline__head">2021.10 – 2022.06 ／ Restoration</p>
           <h3 class="timeline__title">改修工事</h3>
           <p class="timeline__desc">柱の建て直し、屋根葺替え、外装一新。職人と相談しながら、残すべき木材は徹底的に再使用。</p>
@@ -84,7 +84,7 @@
       </div>
       <div class="timeline__step">
         <div class="timeline__num">04</div>
-        <div class="timeline__body">
+        <div class="timeline__body reveal">
           <p class="timeline__head">2022.07 ／ Completion</p>
           <h3 class="timeline__title">竣工</h3>
           <p class="timeline__desc">1日1組限定の宿として再生。海と松、間接照明と枯山水。「過去」と「現代」が、ひとつ屋根の下にある。</p>
@@ -108,7 +108,13 @@
   </div>
 </section>
 
-<section class="back-to"><div class="wrap"><a href="index.html#works">← Back to all works</a></div></section>
+<section class="back-to">
+  <div class="wrap back-to__inner">
+    <a href="work-04-hakodate.html">← 04 函館港の灯台食堂</a>
+    <span class="back-to__center"><a href="index.html#works">All Works</a></span>
+    <a href="work-06-enoshima.html">06 江ノ島マリーナハウス →</a>
+  </div>
+</section>
 
 <footer class="ft">
   <div class="wrap ft__row">
@@ -118,6 +124,11 @@
   <div class="wrap ft__bottom"><span>© 2026 WAN ARCHITECTS</span><span>― FICTIONAL BRAND PORTFOLIO ―</span></div>
 </footer>
 
-<script>const hd=document.getElementById('hd');window.addEventListener('scroll',()=>hd.classList.toggle('is-scrolled',window.scrollY>80));</script>
+<script>
+const hd=document.getElementById('hd');
+window.addEventListener('scroll',()=>hd.classList.toggle('is-scrolled',window.scrollY>80));
+const revealObs=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-visible');revealObs.unobserve(e.target);}});},{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el=>revealObs.observe(el));
+</script>
 </body>
 </html>

@@ -57,7 +57,7 @@
     <div class="timeline">
       <div class="timeline__step">
         <div class="timeline__num">01</div>
-        <div class="timeline__body">
+        <div class="timeline__body reveal">
           <p class="timeline__head">2023.02 ／ Survey</p>
           <h3 class="timeline__title">現地調査</h3>
           <p class="timeline__desc">築100年のレンガ倉庫。長年使われず傷んだ外壁、しかし躯体は健在。残すべきものと変えるべきものを丁寧に見極める。</p>
@@ -66,7 +66,7 @@
       </div>
       <div class="timeline__step">
         <div class="timeline__num">02</div>
-        <div class="timeline__body">
+        <div class="timeline__body reveal">
           <p class="timeline__head">2023.03 ／ Concept</p>
           <h3 class="timeline__title">構想</h3>
           <p class="timeline__desc">「過去と未来の対話」をコンセプトに、既存レンガを徹底保存しつつ大開口ガラスで現代の美術空間を挿入する。</p>
@@ -75,7 +75,7 @@
       </div>
       <div class="timeline__step">
         <div class="timeline__num">03</div>
-        <div class="timeline__body">
+        <div class="timeline__body reveal">
           <p class="timeline__head">2023.06 – 2024.03 ／ Construction</p>
           <h3 class="timeline__title">改修工事</h3>
           <p class="timeline__desc">構造補強と並行し、レンガ壁の洗浄と一部解体、新設ガラスファサード設置。職人の手作業を多用。</p>
@@ -84,7 +84,7 @@
       </div>
       <div class="timeline__step">
         <div class="timeline__num">04</div>
-        <div class="timeline__body">
+        <div class="timeline__body reveal">
           <p class="timeline__head">2024.04 ／ Completion</p>
           <h3 class="timeline__title">竣工</h3>
           <p class="timeline__desc">100年の風合いを残したレンガ壁と、新しいガラス・コンクリートが共存する小さな美術館。地域の文化拠点として再生。</p>
@@ -109,7 +109,11 @@
 </section>
 
 <section class="back-to">
-  <div class="wrap"><a href="index.html#works">← Back to all works</a></div>
+  <div class="wrap back-to__inner">
+    <a href="work-06-enoshima.html">← 06 江ノ島マリーナハウス</a>
+    <span class="back-to__center"><a href="index.html#works">All Works</a></span>
+    <a href="work-02-hayama.html">02 葉山の家 →</a>
+  </div>
 </section>
 
 <footer class="ft">
@@ -123,6 +127,8 @@
 <script>
 const hd=document.getElementById('hd');
 window.addEventListener('scroll',()=>hd.classList.toggle('is-scrolled',window.scrollY>80));
+const revealObs=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-visible');revealObs.unobserve(e.target);}});},{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el=>revealObs.observe(el));
 </script>
 </body>
 </html>

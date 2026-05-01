@@ -57,7 +57,7 @@
     <div class="timeline">
       <div class="timeline__step">
         <div class="timeline__num">01</div>
-        <div class="timeline__body">
+        <div class="timeline__body reveal">
           <p class="timeline__head">2022.06 ／ Site</p>
           <h3 class="timeline__title">敷地</h3>
           <p class="timeline__desc">江の島の港。風と波と、観光客と、漁港の喧騒。多様な顔が交差する場所に、新しいクラブハウスを置く。</p>
@@ -66,7 +66,7 @@
       </div>
       <div class="timeline__step">
         <div class="timeline__num">02</div>
-        <div class="timeline__body">
+        <div class="timeline__body reveal">
           <p class="timeline__head">2022.10 ／ Concept</p>
           <h3 class="timeline__title">魚から学ぶ</h3>
           <p class="timeline__desc">流線型のボディ、うっすら鱗を思わせる金属パネル。「言われてみれば魚」。海と建築の境界を曖昧にする抽象。</p>
@@ -75,7 +75,7 @@
       </div>
       <div class="timeline__step">
         <div class="timeline__num">03</div>
-        <div class="timeline__body">
+        <div class="timeline__body reveal">
           <p class="timeline__head">2023.04 – 2023.11 ／ Construction</p>
           <h3 class="timeline__title">建設</h3>
           <p class="timeline__desc">鉄骨の曲面架構を組み、特注の金属パネルを一枚一枚施工。職人技の見せ場でもあった工程。</p>
@@ -84,7 +84,7 @@
       </div>
       <div class="timeline__step">
         <div class="timeline__num">04</div>
-        <div class="timeline__body">
+        <div class="timeline__body reveal">
           <p class="timeline__head">2023.12 ／ Completion</p>
           <h3 class="timeline__title">竣工</h3>
           <p class="timeline__desc">夕焼けにシルバー・パステルブルーの鱗が呼応。江の島のシルエットと並んで、新しいランドマークになった。</p>
@@ -108,7 +108,13 @@
   </div>
 </section>
 
-<section class="back-to"><div class="wrap"><a href="index.html#works">← Back to all works</a></div></section>
+<section class="back-to">
+  <div class="wrap back-to__inner">
+    <a href="work-05-manazuru.html">← 05 真鶴の漁師宿</a>
+    <span class="back-to__center"><a href="index.html#works">All Works</a></span>
+    <a href="work-01-yokosuka.html">01 横須賀倉庫の小さな美術館 →</a>
+  </div>
+</section>
 
 <footer class="ft">
   <div class="wrap ft__row">
@@ -118,6 +124,11 @@
   <div class="wrap ft__bottom"><span>© 2026 WAN ARCHITECTS</span><span>― FICTIONAL BRAND PORTFOLIO ―</span></div>
 </footer>
 
-<script>const hd=document.getElementById('hd');window.addEventListener('scroll',()=>hd.classList.toggle('is-scrolled',window.scrollY>80));</script>
+<script>
+const hd=document.getElementById('hd');
+window.addEventListener('scroll',()=>hd.classList.toggle('is-scrolled',window.scrollY>80));
+const revealObs=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-visible');revealObs.unobserve(e.target);}});},{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el=>revealObs.observe(el));
+</script>
 </body>
 </html>

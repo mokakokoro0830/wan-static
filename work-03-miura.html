@@ -57,7 +57,7 @@
     <div class="timeline">
       <div class="timeline__step">
         <div class="timeline__num">01</div>
-        <div class="timeline__body">
+        <div class="timeline__body reveal">
           <p class="timeline__head">2023.04 ／ Site Planning</p>
           <h3 class="timeline__title">敷地計画</h3>
           <p class="timeline__desc">海を望む南斜面 800坪。5棟の配置を斜面の高低差で立体的に組む。それぞれが互いに視線を遮らないよう測量・検証。</p>
@@ -66,7 +66,7 @@
       </div>
       <div class="timeline__step">
         <div class="timeline__num">02</div>
-        <div class="timeline__body">
+        <div class="timeline__body reveal">
           <p class="timeline__head">2023.06 ／ Concept</p>
           <h3 class="timeline__title">統一設計</h3>
           <p class="timeline__desc">5棟すべてに同じデザイン言語：片流れの大屋根、黒ガルバ、ヒノキ軒、大判ガラス。配置と方位だけで個性を作る。</p>
@@ -75,7 +75,7 @@
       </div>
       <div class="timeline__step">
         <div class="timeline__num">03</div>
-        <div class="timeline__body">
+        <div class="timeline__body reveal">
           <p class="timeline__head">2023.12 – 2024.09 ／ Construction</p>
           <h3 class="timeline__title">建設</h3>
           <p class="timeline__desc">5棟を時間差で建設。1棟が完成する頃、隣の棟は躯体工事中という状況。職人の手が全棟に行き届く工程設計。</p>
@@ -84,7 +84,7 @@
       </div>
       <div class="timeline__step">
         <div class="timeline__num">04</div>
-        <div class="timeline__body">
+        <div class="timeline__body reveal">
           <p class="timeline__head">2024.10 ／ Completion</p>
           <h3 class="timeline__title">竣工</h3>
           <p class="timeline__desc">5棟が斜面に静かに並ぶ。同じ顔、違う立ち位置。会員制施設として、年間100組以上を受け入れている。</p>
@@ -108,7 +108,13 @@
   </div>
 </section>
 
-<section class="back-to"><div class="wrap"><a href="index.html#works">← Back to all works</a></div></section>
+<section class="back-to">
+  <div class="wrap back-to__inner">
+    <a href="work-02-hayama.html">← 02 葉山の家</a>
+    <span class="back-to__center"><a href="index.html#works">All Works</a></span>
+    <a href="work-04-hakodate.html">04 函館港の灯台食堂 →</a>
+  </div>
+</section>
 
 <footer class="ft">
   <div class="wrap ft__row">
@@ -118,6 +124,11 @@
   <div class="wrap ft__bottom"><span>© 2026 WAN ARCHITECTS</span><span>― FICTIONAL BRAND PORTFOLIO ―</span></div>
 </footer>
 
-<script>const hd=document.getElementById('hd');window.addEventListener('scroll',()=>hd.classList.toggle('is-scrolled',window.scrollY>80));</script>
+<script>
+const hd=document.getElementById('hd');
+window.addEventListener('scroll',()=>hd.classList.toggle('is-scrolled',window.scrollY>80));
+const revealObs=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-visible');revealObs.unobserve(e.target);}});},{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el=>revealObs.observe(el));
+</script>
 </body>
 </html>

@@ -26,7 +26,7 @@
 
 <!-- HERO -->
 <section class="detail">
-  <div class="detail__hero" style="background-image:url('images/stage-5-completed.jpg')">
+  <div class="detail__hero" style="background-image:url('images/work-02-hayama.jpg')">
     <div class="detail__hero-text">
       <div class="wrap">
         <p class="detail__cat">02 ／ Residential ／ New Construction</p>
@@ -87,7 +87,7 @@
       <!-- Step 01 -->
       <div class="timeline__step">
         <div class="timeline__num">01</div>
-        <div class="timeline__body">
+        <div class="timeline__body reveal">
           <p class="timeline__head">2022.04 ／ Site Survey</p>
           <h3 class="timeline__title">敷地調査</h3>
           <p class="timeline__desc">
@@ -101,7 +101,7 @@
       <!-- Step 02 -->
       <div class="timeline__step">
         <div class="timeline__num">02</div>
-        <div class="timeline__body">
+        <div class="timeline__body reveal">
           <p class="timeline__head">2022.06 ／ Concept Sketch</p>
           <h3 class="timeline__title">コンセプトスケッチ</h3>
           <p class="timeline__desc">
@@ -115,7 +115,7 @@
       <!-- Step 03 -->
       <div class="timeline__step">
         <div class="timeline__num">03</div>
-        <div class="timeline__body">
+        <div class="timeline__body reveal">
           <p class="timeline__head">2022.08 ／ 3D Study</p>
           <h3 class="timeline__title">3Dスタディ</h3>
           <p class="timeline__desc">
@@ -129,7 +129,7 @@
       <!-- Step 04 -->
       <div class="timeline__step">
         <div class="timeline__num">04</div>
-        <div class="timeline__body">
+        <div class="timeline__body reveal">
           <p class="timeline__head">2022.11 – 2023.06 ／ Construction</p>
           <h3 class="timeline__title">建設</h3>
           <p class="timeline__desc">
@@ -143,7 +143,7 @@
       <!-- Step 05 -->
       <div class="timeline__step">
         <div class="timeline__num">05</div>
-        <div class="timeline__body">
+        <div class="timeline__body reveal">
           <p class="timeline__head">2023.07 ／ Completion</p>
           <h3 class="timeline__title">竣工</h3>
           <p class="timeline__desc">
@@ -183,8 +183,10 @@
 
 <!-- BACK -->
 <section class="back-to">
-  <div class="wrap">
-    <a href="index.html#works">← Back to all works</a>
+  <div class="wrap back-to__inner">
+    <a href="work-01-yokosuka.html">← 01 横須賀倉庫の小さな美術館</a>
+    <span class="back-to__center"><a href="index.html#works">All Works</a></span>
+    <a href="work-03-miura.html">03 三浦半島のコテージ群 →</a>
   </div>
 </section>
 
@@ -210,10 +212,10 @@
 </footer>
 
 <script>
-  const hd = document.getElementById('hd');
-  window.addEventListener('scroll', () => {
-    hd.classList.toggle('is-scrolled', window.scrollY > 80);
-  });
+const hd=document.getElementById('hd');
+window.addEventListener('scroll',()=>hd.classList.toggle('is-scrolled',window.scrollY>80));
+const revealObs=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-visible');revealObs.unobserve(e.target);}});},{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el=>revealObs.observe(el));
 </script>
 
 </body>
