@@ -499,3 +499,75 @@ ul{list-style:none}
   .hero__title{font-size:2.2rem}
   .ft__row{flex-direction:column}
 }
+
+/* === Scroll Reveal === */
+.reveal{opacity:0;transform:translateY(36px);transition:opacity .75s cubic-bezier(.2,.9,.3,1),transform .75s cubic-bezier(.2,.9,.3,1)}
+.reveal.is-visible{opacity:1;transform:none}
+.reveal-d1{transition-delay:.1s}
+.reveal-d2{transition-delay:.2s}
+.reveal-d3{transition-delay:.3s}
+.reveal-d4{transition-delay:.4s}
+
+/* === Map Section === */
+.map-sec{background:var(--navy);padding-bottom:0}
+.map-sec__head{padding:120px 0 48px;text-align:center}
+.map-sec__head .sec__title{color:var(--salt)}
+.map-sec__head .sec__sub{text-align:center}
+#wan-map{height:560px;width:100%;display:block}
+
+/* === Cinematic Tour === */
+.cinematic{background:var(--navy-d);padding-top:120px}
+.cinematic__intro{padding-bottom:48px}
+.cinematic__film{
+  height:68vh;min-height:440px;
+  position:relative;overflow:hidden;
+}
+.cinematic__frame{
+  position:absolute;inset:0;
+  background-size:cover;background-position:center;
+  opacity:0;transition:opacity 1.4s ease;
+}
+.cinematic__frame.is-active{opacity:1}
+.cinematic__overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(15,30,51,0.25) 0%,rgba(15,30,51,0.55) 100%);
+}
+.cinematic__ctrl{
+  position:absolute;bottom:28px;right:32px;z-index:10;
+  display:flex;align-items:center;gap:14px;
+}
+.cinematic__label{
+  font-family:var(--serif);font-style:italic;
+  font-size:0.7rem;letter-spacing:0.3em;
+  color:rgba(244,240,230,0.65);text-transform:uppercase;
+}
+.cinematic__play{
+  width:46px;height:46px;
+  border:1px solid rgba(244,240,230,0.45);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;background:rgba(15,30,51,0.5);
+  backdrop-filter:blur(8px);
+  color:var(--salt);transition:border-color .2s,background .2s;
+}
+.cinematic__play:hover{border-color:var(--driftwood);background:rgba(184,162,132,0.15)}
+.cinematic__bar{
+  position:absolute;bottom:0;left:0;right:0;height:2px;
+  background:rgba(244,240,230,0.12);
+}
+.cinematic__progress{
+  height:100%;background:var(--driftwood);width:0%;
+  transition:width .25s linear;
+}
+.cinematic__caption{
+  padding:28px 40px;
+  display:flex;justify-content:space-between;align-items:center;
+  border-top:1px solid rgba(184,162,132,0.15);
+}
+.cinematic__caption-title{
+  font-family:var(--jp-mincho);color:var(--salt);
+  font-size:1.05rem;letter-spacing:0.18em;
+}
+.cinematic__caption-sub{
+  font-family:var(--serif);font-style:italic;
+  color:var(--driftwood);font-size:0.8rem;letter-spacing:0.15em;
+}

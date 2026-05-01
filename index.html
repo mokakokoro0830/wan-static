@@ -17,9 +17,9 @@
     <a href="#" class="hd__logo">湾<small>WAN ARCHITECTS</small></a>
     <nav class="hd__nav">
       <a href="#works">WORKS</a>
+      <a href="#map">MAP</a>
       <a href="#philosophy">PHILOSOPHY</a>
       <a href="#team">TEAM</a>
-      <a href="#journal">JOURNAL</a>
     </nav>
     <a href="#contact" class="hd__cta">CONTACT</a>
   </div>
@@ -74,42 +74,42 @@
 
     <div class="works__grid">
 
-      <a href="work-01-yokosuka.html" class="work-card">
+      <a href="work-01-yokosuka.html" class="work-card reveal">
         <div class="work-card__img" data-num="01" style="background-image:url('images/work-01-yokosuka.jpg')"></div>
         <p class="work-card__cat">商業 / リノベーション</p>
         <h3 class="work-card__name">横須賀倉庫の小さな美術館<em>YOKOSUKA WAREHOUSE</em></h3>
         <p class="work-card__meta">2024 / 神奈川県横須賀市 / 285㎡</p>
       </a>
 
-      <a href="work-02-hayama.html" class="work-card">
+      <a href="work-02-hayama.html" class="work-card reveal reveal-d1">
         <div class="work-card__img" data-num="02" style="background-image:url('images/work-02-hayama.jpg')"></div>
         <p class="work-card__cat">戸建 / 新築</p>
         <h3 class="work-card__name">葉山の家<em>HAYAMA HOUSE</em></h3>
         <p class="work-card__meta">2023 / 神奈川県葉山町 / 142㎡</p>
       </a>
 
-      <a href="work-03-miura.html" class="work-card">
+      <a href="work-03-miura.html" class="work-card reveal reveal-d2">
         <div class="work-card__img" data-num="03" style="background-image:url('images/work-03-miura.jpg')"></div>
         <p class="work-card__cat">別荘 / 集合施設</p>
         <h3 class="work-card__name">三浦半島のコテージ群<em>MIURA COTTAGES</em></h3>
         <p class="work-card__meta">2024 / 神奈川県三浦市 / 5棟</p>
       </a>
 
-      <a href="work-04-hakodate.html" class="work-card">
+      <a href="work-04-hakodate.html" class="work-card reveal reveal-d3">
         <div class="work-card__img" data-num="04" style="background-image:url('images/work-04-hakodate.jpg')"></div>
         <p class="work-card__cat">商業 / リノベーション</p>
         <h3 class="work-card__name">函館港の灯台食堂<em>HAKODATE LIGHTHOUSE</em></h3>
         <p class="work-card__meta">2025 / 北海道函館市 / 156㎡</p>
       </a>
 
-      <a href="work-05-manazuru.html" class="work-card">
+      <a href="work-05-manazuru.html" class="work-card reveal">
         <div class="work-card__img" data-num="05" style="background-image:url('images/work-05-manazuru.jpg')"></div>
         <p class="work-card__cat">古民家再生</p>
         <h3 class="work-card__name">真鶴の漁師宿<em>MANAZURU INN</em></h3>
         <p class="work-card__meta">2022 / 神奈川県真鶴町 / 218㎡</p>
       </a>
 
-      <a href="work-06-enoshima.html" class="work-card">
+      <a href="work-06-enoshima.html" class="work-card reveal reveal-d1">
         <div class="work-card__img" data-num="06" style="background-image:url('images/work-06-enoshima.jpg')"></div>
         <p class="work-card__cat">公共 / 新築</p>
         <h3 class="work-card__name">江ノ島マリーナハウス<em>ENOSHIMA MARINA</em></h3>
@@ -118,6 +118,44 @@
 
     </div>
   </div>
+</section>
+
+<!-- CINEMATIC TOUR -->
+<section class="cinematic" id="tour">
+  <div class="wrap cinematic__intro">
+    <p class="kicker reveal" style="color:var(--driftwood)">― Cinematic Tour</p>
+    <h2 class="sec__title reveal reveal-d1" style="color:var(--salt)">葉山の家、全景。</h2>
+    <p class="sec__sub reveal reveal-d2">— A cinematic walkthrough of Hayama House —</p>
+  </div>
+  <div class="cinematic__film">
+    <div class="cinematic__frame is-active" data-title="01 ― 敷地調査" data-sub="Site Survey / Hayama, Kanagawa" style="background-image:url('images/stage-1-site.jpg')"></div>
+    <div class="cinematic__frame" data-title="02 ― スケッチ" data-sub="Concept Sketch / Hayama, Kanagawa" style="background-image:url('images/stage-2-sketch.jpg')"></div>
+    <div class="cinematic__frame" data-title="03 ― 3Dスタディ" data-sub="3D Study / Hayama, Kanagawa" style="background-image:url('images/stage-3-3d.jpg')"></div>
+    <div class="cinematic__frame" data-title="04 ― 建設" data-sub="Construction / Hayama, Kanagawa" style="background-image:url('images/stage-4-construction.jpg')"></div>
+    <div class="cinematic__frame" data-title="05 ― 竣工" data-sub="Completion / Hayama, Kanagawa" style="background-image:url('images/stage-5-completed.jpg')"></div>
+    <div class="cinematic__overlay"></div>
+    <div class="cinematic__ctrl">
+      <span class="cinematic__label">PROCESS TOUR</span>
+      <button class="cinematic__play" id="cin-play" aria-label="Play/Pause">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor"><path d="M3 2l9 5-9 5V2z"/></svg>
+      </button>
+    </div>
+    <div class="cinematic__bar"><div class="cinematic__progress" id="cin-progress"></div></div>
+  </div>
+  <div class="cinematic__caption">
+    <span class="cinematic__caption-title" id="cin-title">01 ― 敷地調査</span>
+    <span class="cinematic__caption-sub" id="cin-sub">Site Survey / Hayama, Kanagawa</span>
+  </div>
+</section>
+
+<!-- MAP -->
+<section class="map-sec" id="map">
+  <div class="map-sec__head reveal">
+    <p class="kicker" style="color:var(--driftwood)">― Project Locations</p>
+    <h2 class="sec__title">海辺の地図</h2>
+    <p class="sec__sub">— Where our buildings stand —</p>
+  </div>
+  <div id="wan-map"></div>
 </section>
 
 <!-- PHILOSOPHY -->
@@ -268,6 +306,87 @@
     if (!auto) return;
     setStage((current + 1) % 5);
   }, 3500);
+
+  // === Scroll Reveal ===
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-visible'); revealObserver.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+  // === Cinematic Tour ===
+  const cinFrames = document.querySelectorAll('.cinematic__frame');
+  const cinTitle = document.getElementById('cin-title');
+  const cinSub = document.getElementById('cin-sub');
+  const cinProgress = document.getElementById('cin-progress');
+  const cinPlay = document.getElementById('cin-play');
+  let cinCurrent = 0, cinPlaying = false, cinTimer = null, cinStartTime = null, cinDuration = 4000;
+
+  const playIcon = '<svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor"><path d="M3 2l9 5-9 5V2z"/></svg>';
+  const pauseIcon = '<svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor"><path d="M3 2h3v10H3zm5 0h3v10H8z"/></svg>';
+
+  function cinGo(i) {
+    cinFrames.forEach((f, idx) => f.classList.toggle('is-active', idx === i));
+    cinTitle.textContent = cinFrames[i].dataset.title;
+    cinSub.textContent = cinFrames[i].dataset.sub;
+    cinCurrent = i;
+  }
+
+  function cinTick() {
+    const elapsed = Date.now() - cinStartTime;
+    const pct = Math.min((elapsed / cinDuration) * 100, 100);
+    cinProgress.style.width = pct + '%';
+    if (elapsed >= cinDuration) {
+      cinGo((cinCurrent + 1) % cinFrames.length);
+      cinStartTime = Date.now();
+      cinProgress.style.width = '0%';
+    }
+    if (cinPlaying) requestAnimationFrame(cinTick);
+  }
+
+  function cinStart() {
+    cinPlaying = true; cinStartTime = Date.now();
+    cinPlay.innerHTML = pauseIcon;
+    requestAnimationFrame(cinTick);
+  }
+  function cinStop() {
+    cinPlaying = false;
+    cinPlay.innerHTML = playIcon;
+  }
+
+  cinPlay.addEventListener('click', () => { cinPlaying ? cinStop() : cinStart(); });
+
+  // Auto-start when scrolled into view
+  new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting && !cinPlaying) cinStart(); else if (!e.isIntersecting) cinStop(); });
+  }, { threshold: 0.3 }).observe(document.querySelector('.cinematic__film'));
+</script>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+  const map = L.map('wan-map', { zoomControl: true, scrollWheelZoom: false }).setView([36.5, 138.5], 6);
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+    attribution: '© OpenStreetMap © CARTO', maxZoom: 18
+  }).addTo(map);
+
+  const markerStyle = L.divIcon({
+    className: '', html: '<div style="width:12px;height:12px;background:#1B2D44;border:2px solid #B8A284;border-radius:50%;box-shadow:0 2px 8px rgba(27,45,68,0.4)"></div>',
+    iconSize: [12, 12], iconAnchor: [6, 6]
+  });
+
+  const projects = [
+    { ll: [35.28, 139.67], name: '横須賀倉庫の小さな美術館', sub: '2024 / 285㎡', url: 'work-01-yokosuka.html' },
+    { ll: [35.27, 139.58], name: '葉山の家',                  sub: '2023 / 142㎡', url: 'work-02-hayama.html' },
+    { ll: [35.14, 139.62], name: '三浦半島のコテージ群',       sub: '2024 / 5棟',  url: 'work-03-miura.html' },
+    { ll: [41.77, 140.73], name: '函館港の灯台食堂',           sub: '2025 / 156㎡', url: 'work-04-hakodate.html' },
+    { ll: [35.16, 139.13], name: '真鶴の漁師宿',              sub: '2022 / 218㎡', url: 'work-05-manazuru.html' },
+    { ll: [35.30, 139.48], name: '江ノ島マリーナハウス',       sub: '2023 / 312㎡', url: 'work-06-enoshima.html' },
+  ];
+
+  projects.forEach(p => {
+    L.marker(p.ll, { icon: markerStyle }).addTo(map)
+      .bindPopup(`<div style="font-family:'Shippori Mincho',serif;min-width:160px"><b style="font-size:1rem;color:#1B2D44">${p.name}</b><br><span style="font-size:0.8rem;color:#8E4F2A;font-style:italic">${p.sub}</span><br><a href="${p.url}" style="font-size:0.8rem;color:#1B2D44;text-decoration:underline;display:inline-block;margin-top:6px">詳細 →</a></div>`, { closeButton: false });
+  });
 </script>
 
 </body>
