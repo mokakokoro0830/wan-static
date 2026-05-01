@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>湾アーキテクツ｜海辺の建築設計事務所</title>
+<meta name="description" content="海辺・港町に特化した建築設計事務所。設計から完成まで、プロセスを公開しながらつくります。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&family=Noto+Serif+JP:wght@300;400;500&family=Shippori+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="hd" id="hd">
+  <div class="wrap hd__row">
+    <a href="#" class="hd__logo">湾<small>WAN ARCHITECTS</small></a>
+    <nav class="hd__nav">
+      <a href="#works">WORKS</a>
+      <a href="#philosophy">PHILOSOPHY</a>
+      <a href="#team">TEAM</a>
+      <a href="#journal">JOURNAL</a>
+    </nav>
+    <a href="#contact" class="hd__cta">CONTACT</a>
+  </div>
+</header>
+
+<!-- HERO with tabbed process visualization -->
+<section class="hero">
+  <div class="hero__bg">
+    <div class="stage stage--1 is-active" data-stage="1" style="background-image:url('images/stage-1-site.jpg')"></div>
+    <div class="stage stage--2" data-stage="2" style="background-image:url('images/stage-2-sketch.jpg')"></div>
+    <div class="stage stage--3" data-stage="3" style="background-image:url('images/stage-3-3d.jpg')"></div>
+    <div class="stage stage--4" data-stage="4" style="background-image:url('images/stage-4-construction.jpg')"></div>
+    <div class="stage stage--5" data-stage="5" style="background-image:url('images/stage-5-completed.jpg')"></div>
+  </div>
+
+  <div class="hero__inner">
+    <p class="hero__sub">― Architecture by the sea, in process ―</p>
+    <h1 class="hero__title">海辺の建築は、<br><em>潮と時間で</em>かたちを変える。</h1>
+
+    <div class="hero__stage-label">
+      <span class="num" id="stage-num">01</span>
+      <span class="name">
+        <span id="stage-en">Site Survey</span>
+        <b id="stage-jp">敷地調査</b>
+      </span>
+    </div>
+
+    <div class="hero__tabs">
+      <button class="tab is-active" data-stage="1"><span>01</span><b>敷地</b></button>
+      <button class="tab" data-stage="2"><span>02</span><b>スケッチ</b></button>
+      <button class="tab" data-stage="3"><span>03</span><b>3D</b></button>
+      <button class="tab" data-stage="4"><span>04</span><b>建設</b></button>
+      <button class="tab" data-stage="5"><span>05</span><b>竣工</b></button>
+    </div>
+
+    <p class="hero__hint">↑ クリック or 自動再生で5段階プロセスを表示</p>
+  </div>
+</section>
+
+<!-- WORKS -->
+<section class="sec works" id="works">
+  <div class="wrap">
+    <div class="sec__head">
+      <p class="kicker">― Selected Works</p>
+      <h2 class="sec__title">海辺の作品集</h2>
+      <p class="sec__sub">— Six recent projects from coast to harbor —</p>
+      <p class="sec__lead">
+        港町の倉庫リノベ、別荘地のコテージ、漁村の古民家再生まで。<br>
+        どの作品も、設計から完成までのプロセスを記録しています。
+      </p>
+    </div>
+
+    <div class="works__grid">
+
+      <a href="work-01-yokosuka.html" class="work-card">
+        <div class="work-card__img" data-num="01" style="background-image:url('images/work-01-yokosuka.jpg')"></div>
+        <p class="work-card__cat">商業 / リノベーション</p>
+        <h3 class="work-card__name">横須賀倉庫の小さな美術館<em>YOKOSUKA WAREHOUSE</em></h3>
+        <p class="work-card__meta">2024 / 神奈川県横須賀市 / 285㎡</p>
+      </a>
+
+      <a href="work-02-hayama.html" class="work-card">
+        <div class="work-card__img" data-num="02" style="background-image:url('images/work-02-hayama.jpg')"></div>
+        <p class="work-card__cat">戸建 / 新築</p>
+        <h3 class="work-card__name">葉山の家<em>HAYAMA HOUSE</em></h3>
+        <p class="work-card__meta">2023 / 神奈川県葉山町 / 142㎡</p>
+      </a>
+
+      <a href="work-03-miura.html" class="work-card">
+        <div class="work-card__img" data-num="03" style="background-image:url('images/work-03-miura.jpg')"></div>
+        <p class="work-card__cat">別荘 / 集合施設</p>
+        <h3 class="work-card__name">三浦半島のコテージ群<em>MIURA COTTAGES</em></h3>
+        <p class="work-card__meta">2024 / 神奈川県三浦市 / 5棟</p>
+      </a>
+
+      <a href="work-04-hakodate.html" class="work-card">
+        <div class="work-card__img" data-num="04" style="background-image:url('images/work-04-hakodate.jpg')"></div>
+        <p class="work-card__cat">商業 / リノベーション</p>
+        <h3 class="work-card__name">函館港の灯台食堂<em>HAKODATE LIGHTHOUSE</em></h3>
+        <p class="work-card__meta">2025 / 北海道函館市 / 156㎡</p>
+      </a>
+
+      <a href="work-05-manazuru.html" class="work-card">
+        <div class="work-card__img" data-num="05" style="background-image:url('images/work-05-manazuru.jpg')"></div>
+        <p class="work-card__cat">古民家再生</p>
+        <h3 class="work-card__name">真鶴の漁師宿<em>MANAZURU INN</em></h3>
+        <p class="work-card__meta">2022 / 神奈川県真鶴町 / 218㎡</p>
+      </a>
+
+      <a href="work-06-enoshima.html" class="work-card">
+        <div class="work-card__img" data-num="06" style="background-image:url('images/work-06-enoshima.jpg')"></div>
+        <p class="work-card__cat">公共 / 新築</p>
+        <h3 class="work-card__name">江ノ島マリーナハウス<em>ENOSHIMA MARINA</em></h3>
+        <p class="work-card__meta">2023 / 神奈川県藤沢市 / 312㎡</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- PHILOSOPHY -->
+<section class="sec philo" id="philosophy">
+  <div class="wrap">
+    <div class="sec__head">
+      <p class="kicker" style="color:var(--driftwood)">― Philosophy</p>
+      <h2 class="sec__title">海辺の建築、<br>四つのこと。</h2>
+      <p class="sec__sub">— Four things we believe about coastal architecture —</p>
+    </div>
+
+    <div class="philo__grid">
+      <div class="philo__item">
+        <h3>01｜時間と素材</h3>
+        <p>海辺の素材は、潮風で経年変化することを前提とします。新品の美しさより、十年後・二十年後に深まる味わいを設計します。</p>
+      </div>
+      <div class="philo__item">
+        <h3>02｜風土を読む</h3>
+        <p>港町・漁村・別荘地、それぞれに育まれた建築の作法があります。設計に入る前に、地元の漁師や工務店へ必ず話を聞きにいきます。</p>
+      </div>
+      <div class="philo__item">
+        <h3>03｜プロセスを公開する</h3>
+        <p>設計図、3Dモデル、建設中の写真、施主との対話。すべてを記録・公開します。建築は完成だけが価値ではないと考えるからです。</p>
+      </div>
+      <div class="philo__item">
+        <h3>04｜小さな建築から</h3>
+        <p>大規模開発ではなく、その土地に必要なだけの規模で。茶室・船小屋・別荘、小さなものから始めることを大切にしています。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="sec" id="team">
+  <div class="wrap">
+    <div class="sec__head">
+      <p class="kicker">― Team</p>
+      <h2 class="sec__title">設計チーム</h2>
+      <p class="sec__sub">— A small studio of three —</p>
+    </div>
+
+    <div class="team__row">
+      <div class="member">
+        <div class="member__photo" style="background-image:url('images/team-1-sada.jpg')"></div>
+        <p class="member__role">代表 ／ Principal</p>
+        <h3 class="member__name">佐田 海<em style="font-style:italic;font-family:var(--serif);font-size:0.65em;color:var(--rust);font-weight:400;margin-left:8px">Umi Sada</em></h3>
+      </div>
+      <div class="member">
+        <div class="member__photo" style="background-image:url('images/team-2-horikawa.jpg')"></div>
+        <p class="member__role">パートナー ／ Partner</p>
+        <h3 class="member__name">堀川 凪<em style="font-style:italic;font-family:var(--serif);font-size:0.65em;color:var(--rust);font-weight:400;margin-left:8px">Nagi Horikawa</em></h3>
+      </div>
+      <div class="member">
+        <div class="member__photo" style="background-image:url('images/team-3-iwanami.jpg')"></div>
+        <p class="member__role">設計 ／ Architect</p>
+        <h3 class="member__name">岩浪 葉<em style="font-style:italic;font-family:var(--serif);font-size:0.65em;color:var(--rust);font-weight:400;margin-left:8px">Yo Iwanami</em></h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT CTA -->
+<section class="cta" id="contact">
+  <div class="wrap">
+    <p class="kicker" style="color:var(--driftwood)">― Inquiry</p>
+    <h2 class="cta__title">海辺の家を、<br>一緒に設計しませんか。</h2>
+    <a href="mailto:hello@example.com" class="cta__btn">設計相談へ</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="ft">
+  <div class="wrap ft__row">
+    <div class="ft__col">
+      <a href="#" class="hd__logo">湾<small>WAN ARCHITECTS</small></a>
+    </div>
+    <div class="ft__col">
+      <h4>Studio</h4>
+      <ul>
+        <li>横浜市中区海岸通 X-X-X</li>
+        <li>045-XXX-XXXX</li>
+        <li>hello@example.com</li>
+      </ul>
+    </div>
+    <div class="ft__col">
+      <h4>Hours</h4>
+      <ul>
+        <li>平日 10:00 – 19:00</li>
+        <li>土日祝 要予約</li>
+      </ul>
+    </div>
+    <div class="ft__col">
+      <h4>Areas</h4>
+      <ul>
+        <li>関東一円</li>
+        <li>静岡・伊豆半島</li>
+        <li>新潟・佐渡</li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap ft__bottom">
+    <span>© 2026 WAN ARCHITECTS</span>
+    <span>― FICTIONAL BRAND PORTFOLIO ―</span>
+  </div>
+</footer>
+
+<script>
+  const hd = document.getElementById('hd');
+  window.addEventListener('scroll', () => {
+    hd.classList.toggle('is-scrolled', window.scrollY > 80);
+  });
+
+  // === Hero stage transition (tabs + auto-cycle) ===
+  const STAGES = [
+    { num: '01', en: 'Site Survey',     jp: '敷地調査' },
+    { num: '02', en: 'Concept Sketch',  jp: 'コンセプトスケッチ' },
+    { num: '03', en: '3D Study',        jp: '3Dスタディ' },
+    { num: '04', en: 'Construction',    jp: '建設' },
+    { num: '05', en: 'Completion',      jp: '竣工' },
+  ];
+  const stages = document.querySelectorAll('.stage');
+  const tabs = document.querySelectorAll('.tab');
+  const numEl = document.getElementById('stage-num');
+  const enEl = document.getElementById('stage-en');
+  const jpEl = document.getElementById('stage-jp');
+  let current = 0;
+  let auto = true;
+
+  function setStage(i) {
+    current = i;
+    stages.forEach((s, idx) => s.classList.toggle('is-active', idx === i));
+    tabs.forEach((t, idx) => t.classList.toggle('is-active', idx === i));
+    const s = STAGES[i];
+    numEl.textContent = s.num;
+    enEl.textContent = s.en;
+    jpEl.textContent = s.jp;
+  }
+
+  tabs.forEach((t, i) => {
+    t.addEventListener('click', () => {
+      auto = false;
+      setStage(i);
+    });
+  });
+
+  // Auto-cycle every 3.5s until user interacts
+  setInterval(() => {
+    if (!auto) return;
+    setStage((current + 1) % 5);
+  }, 3500);
+</script>
+
+</body>
+</html>
